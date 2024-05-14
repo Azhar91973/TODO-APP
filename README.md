@@ -2,30 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO APP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        h2 {
-            color: #555;
-        }
-        ul {
-            list-style-type: none;
-        }
-        ul li {
-            background: #f4f4f4;
-            margin: 5px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
 </head>
 <body>
     <h1>TODO APP</h1>
@@ -42,4 +19,3 @@
     <p>TODO APP uses <strong>Room Database</strong> for storing and manipulating the to-dos. Room provides an abstraction layer over SQLite to allow fluent database access while harnessing the full power of SQLite.</p>
 </body>
 </html>
- 
