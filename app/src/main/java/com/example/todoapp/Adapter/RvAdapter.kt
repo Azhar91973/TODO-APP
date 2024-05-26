@@ -3,7 +3,6 @@ package com.example.todoapp.Adapter
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -11,7 +10,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoapp.R
 import com.example.todoapp.Database.TodoList
-import com.example.todoapp.ViewModel.MainViewModel
 
 class RvAdapter(private val context:Context, private val listener: IListRvAdapter): RecyclerView.Adapter<RvAdapter.ListViewHolder>() {
 

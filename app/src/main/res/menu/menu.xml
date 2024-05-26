@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/bottom_nav_todos"
+          android:title="TODO"
+          android:icon="@drawable/ic_todo" />
+    <item android:id="@+id/bottom_nav_completed"
+          android:title="COMPLETED"
+          android:icon="@drawable/ic_completed_png" />
+</menu>

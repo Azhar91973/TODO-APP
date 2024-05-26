@@ -33,23 +33,24 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    buildFeatures{
-        viewBinding = true
-    }
-
 } 
 dependencies{
-    implementation ("androidx.appcompat:appcompat:1.4.1")
-    implementation ("androidx.activity:activity-ktx:1.4.0")
+    implementation (libs.androidx.appcompat)
+    implementation ("androidx.activity:activity-ktx:1.9.0")
 
     // Room components
-    implementation ("androidx.room:room-runtime:2.4.1")
-    annotationProcessor ("androidx.room:room-compiler:2.4.1")
+    implementation ("androidx.room:room-runtime:2.6.1")
+    implementation(libs.androidx.databinding.runtime)
+    annotationProcessor ("androidx.room:room-compiler:2.6.1")
 
     // Lifecycle components
     implementation ("androidx.room:room-ktx:2.6.1")
@@ -63,18 +64,18 @@ dependencies{
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:$arch_version")
 
     // Kotlin components
-    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10")
-    api ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
-    api ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.20")
+    api ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
+    api ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 
     // UI
-    implementation ("androidx.constraintlayout:constraintlayout:2.1.3")
-    implementation ("com.google.android.material:material:1.5.0")
+    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation ("com.google.android.material:material:1.12.0")
 
     // Testing
-    testImplementation ("junit:junit:4.13.2")
-    androidTestImplementation ("androidx.arch.core:core-testing:2.1.0")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
-    androidTestImplementation ("androidx.test.ext:junit:1.1.3")
+    testImplementation (libs.junit)
+    androidTestImplementation ("androidx.arch.core:core-testing:2.2.0")
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation ("androidx.test.ext:junit:1.1.5")
 
 }
