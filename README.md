@@ -12,6 +12,7 @@
         <li><strong>Add ToDO:</strong> Easily add new tasks to your list.</li>
         <li><strong>Delete ToDO:</strong> Remove tasks that are no longer needed.</li>
         <li><strong>Update ToDO:</strong> Edit tasks to keep your list up-to-date.</li>
+         <li><strong>MarkCompleted ToDO:</strong> Mark the tasks as completed</li>
     </ul>
     <h2>Architecture</h2>
     <p>TODO APP uses the <strong>MVVM (Model-View-ViewModel)</strong> architecture to ensure a clean separation of concerns and promote a testable and maintainable codebase.</p>
