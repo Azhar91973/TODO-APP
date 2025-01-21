@@ -5,16 +5,17 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.todoapp.Database.ListDatabase
-import com.example.todoapp.Repository.ToDoListRepo
 import com.example.todoapp.Database.TodoList
+import com.example.todoapp.Repository.ToDoListRepo
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val application: Application) : AndroidViewModel(application) {
 
 
     private val repository: ToDoListRepo
-     val allList: LiveData<List<TodoList>>
+    val allList: LiveData<List<TodoList>>
 
     init {
         val listDao = ListDatabase.getdatabase(application).getTodoListDao()
@@ -36,8 +37,15 @@ class MainViewModel(private val application: Application) : AndroidViewModel(app
 
     fun update(newText: String, id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.update(newText,id)
+            repository.update(newText, id)
         }
     }
 
+    fun markCompleted(id: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.markCompleted(id)
+        }
+    }
+
+    fun getDoneList(): Flow<List<TodoList>> = repository.getDoneList()
 }
